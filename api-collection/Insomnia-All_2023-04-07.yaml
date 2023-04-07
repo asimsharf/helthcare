@@ -1,0 +1,4942 @@
+_type: export
+__export_format: 4
+__export_date: 2023-04-07T17:32:17.720Z
+__export_source: insomnia.desktop.app:v2023.1.0
+resources:
+  - _id: req_87e60fd026e04e7ab096c664e1667d3e
+    parentId: wrk_3db2426480374e4a851f71d7fc719c8b
+    modified: 1672139244453
+    created: 1669813117852
+    url: "{{url}}/api-test"
+    name: api-test
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: Authorization
+        value: "{{token}}"
+        id: pair_cb847d4c7efd498cb957f7a2715418a8
+    authentication: {}
+    metaSortKey: -1669266039254
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_3db2426480374e4a851f71d7fc719c8b
+    parentId: null
+    modified: 1675926823355
+    created: 1667368030355
+    name: SANEDNY-API
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_74b87ce78d934c59a746b2d81b28aa32
+    parentId: fld_89f4325eee6c487393402657a6c47f61
+    modified: 1671462293376
+    created: 1669548050793
+    url: "{{url}}/dashboard/login"
+    name: login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email":"super@mail.com",
+        	"password":"12345678"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_76975aa6b9a040fbb1d2ee34ad4152f1
+    authentication: {}
+    metaSortKey: -1669270898675
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_89f4325eee6c487393402657a6c47f61
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669618030842
+    created: 1669548050791
+    name: auth-super-admin
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549738
+    _type: request_group
+  - _id: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    parentId: wrk_3db2426480374e4a851f71d7fc719c8b
+    modified: 1672139236335
+    created: 1669525861174
+    name: dashboard
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669266039204
+    _type: request_group
+  - _id: req_44454e287b1a42c6ade64bd4429d2c67
+    parentId: fld_89f4325eee6c487393402657a6c47f61
+    modified: 1670228162395
+    created: 1669611975878
+    url: "{{url}}/dashboard/register"
+    name: register
+    description: ""
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - name: fname
+          value: Mohamed
+          id: pair_c8f1cf4ba72642009c7879bec89ee6cd
+        - id: pair_aedad4945dbf48c8be25685bc272ba5b
+          name: lname
+          value: Ali
+          description: ""
+        - id: pair_c0427b1a80364732bd1ac4f8e271c7a0
+          name: email
+          value: test@admin.comd
+          description: ""
+        - id: pair_5b75dddef79e4c51bbb24f9efe961e70
+          name: image
+          value: ""
+          description: ""
+          type: file
+          fileName: /Users/fnrcomac/Pictures/method.png
+        - id: pair_6c36c5fd7b8343ad9bbf2bc09f7cb562
+          name: password
+          value: "12345678"
+          description: ""
+        - id: pair_81c26adafa234da38a90715591bf0ba3
+          name: phone
+          value: "0987654321"
+          description: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+        id: pair_0a4fe96313aa41e6a16b110ec6fd4592
+      - id: pair_67c8ba2106bc48e298622034e11e0e74
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669270898650
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7c73c2ad9cf04e75ad123b64b744410e
+    parentId: fld_89f4325eee6c487393402657a6c47f61
+    modified: 1670073979571
+    created: 1669548050795
+    url: "{{url}}/dashboard/me"
+    name: me
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_2c48270622f8475981cbdb9b161c168b
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669270898631.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_bea14ff4b8bd498eb77380df1e50e8e5
+    parentId: fld_89f4325eee6c487393402657a6c47f61
+    modified: 1669619482433
+    created: 1669548050798
+    url: "{{url}}/dashboard/refresh"
+    name: refresh
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_2c48270622f8475981cbdb9b161c168b
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669270898612.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1e2b0a16a84d445f9170cb55150d636b
+    parentId: fld_89f4325eee6c487393402657a6c47f61
+    modified: 1669619481086
+    created: 1669548050797
+    url: "{{url}}/dashboard/logout"
+    name: logout
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_2c48270622f8475981cbdb9b161c168b
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669270898600
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6ffd91afdb0846968d30483adef7a108
+    parentId: fld_b44e3c53f6b8467a8723f24900cb0639
+    modified: 1670228174427
+    created: 1669548069356
+    url: "{{url}}/admin/login"
+    name: login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "admin@gmail.com",
+        	"password": "12345678"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_50a3ba9e39a04ad3b847a0ba5e25f346
+    authentication: {}
+    metaSortKey: -1669270898675
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_b44e3c53f6b8467a8723f24900cb0639
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669618006009
+    created: 1669548069355
+    name: auth-admin
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549713
+    _type: request_group
+  - _id: req_d007f5571dac4ccab570f46271465922
+    parentId: fld_b44e3c53f6b8467a8723f24900cb0639
+    modified: 1669548190372
+    created: 1669548069361
+    url: "{{url}}/admin/refresh"
+    name: refresh
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_2c48270622f8475981cbdb9b161c168b
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669270898612.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ac3e23fca8eb4be595d940b43b0c9e45
+    parentId: fld_b44e3c53f6b8467a8723f24900cb0639
+    modified: 1670074500140
+    created: 1669548069359
+    url: "{{url}}/admin/users"
+    name: users
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: Authorization
+        value: "{{token}}"
+        id: pair_5c09ed15fadf44cca566b48528e591e6
+    authentication: {}
+    metaSortKey: -1669270898606.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5581529dc22047bfbaa4ab29261afe76
+    parentId: fld_b44e3c53f6b8467a8723f24900cb0639
+    modified: 1669548195191
+    created: 1669548069360
+    url: "{{url}}/admin/logout"
+    name: logout
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_2c48270622f8475981cbdb9b161c168b
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669270898600
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5f2ad9899c2443038d7a76afb81a69fe
+    parentId: fld_b44e3c53f6b8467a8723f24900cb0639
+    modified: 1669812419393
+    created: 1669548069357
+    url: "{{url}}/admin/me"
+    name: me
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_2c48270622f8475981cbdb9b161c168b
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669270898575
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b5ddbb1d31744cd1b57702d9d16f96e8
+    parentId: fld_8b37be41224a4dfeb7ecfa5415d742b3
+    modified: 1674016932220
+    created: 1669811213611
+    url: "{{url}}/dashboard/admins"
+    name: index
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_bce1f621e7c1439e82041a4b0cddb4ef
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_8b37be41224a4dfeb7ecfa5415d742b3
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669811232355
+    created: 1669811213603
+    name: admins
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549706.75
+    _type: request_group
+  - _id: req_d8fee3af62fc4eaeb3481b66239e629f
+    parentId: fld_8b37be41224a4dfeb7ecfa5415d742b3
+    modified: 1674016986302
+    created: 1669811213624
+    url: "{{url}}/dashboard/admins/1"
+    name: show/{adminID}
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_6a3ea951dd2c4578b261b18bbbe6e836
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_fb096bae7f3d4f76af360bbc917244bc
+    parentId: fld_8b37be41224a4dfeb7ecfa5415d742b3
+    modified: 1673960064777
+    created: 1669811213621
+    url: "{{url}}/dashboard/admins/3"
+    name: destroy/{adminID}
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_800252af41994071b9de06cb301d41ce
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_81cc9d55eff84d3da34a9c2ccf4af99b
+    parentId: fld_8b37be41224a4dfeb7ecfa5415d742b3
+    modified: 1670134585738
+    created: 1669811213617
+    url: "{{url}}/dashboard/admins"
+    name: store
+    description: ""
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - name: fname
+          value: Asim
+          id: pair_881166944c104f85b0cefe0f32430fc8
+        - id: pair_2c0b1940cde640279211495ebbaf748d
+          name: lname
+          value: Sharfeldin
+          description: ""
+        - id: pair_87f614ee29e84bc89603af1e652db9e1
+          name: phone
+          value: "0987654321"
+          description: ""
+        - id: pair_824942c9537b4d169f3d63ba3cc95d8e
+          name: email
+          value: asimsharf@gmail.com
+          description: ""
+        - id: pair_8f4ce8fa39f24eef917b63ff5c6a9b84
+          name: image
+          value: ""
+          description: ""
+          type: file
+          fileName: /Users/fnrcomac/Documents/Asim/Asim_small.jpg
+        - id: pair_9cec4e71477c4085aa0009cca8e69696
+          name: password
+          value: "12345678"
+          description: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+        id: pair_ff3cf149ba1c48afab99e10ab522be71
+      - id: pair_7018e8c1f4ae4d178caccbcadd3c97da
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5258db0216d541ed8946fcbe01c87cac
+    parentId: fld_8b37be41224a4dfeb7ecfa5415d742b3
+    modified: 1673960041305
+    created: 1670135171549
+    url: "{{url}}/dashboard/admins/1"
+    name: update/{adminID}
+    description: ""
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - name: fname
+          value: Asim as
+          id: pair_881166944c104f85b0cefe0f32430fc8
+        - id: pair_2c0b1940cde640279211495ebbaf748d
+          name: lname
+          value: Sharfeldin sg
+          description: ""
+        - id: pair_87f614ee29e84bc89603af1e652db9e1
+          name: phone
+          value: "0987654321"
+          description: ""
+        - id: pair_824942c9537b4d169f3d63ba3cc95d8e
+          name: email
+          value: asimsharf@gmail.com
+          description: ""
+        - id: pair_8f4ce8fa39f24eef917b63ff5c6a9b84
+          name: image
+          value: ""
+          description: ""
+          type: file
+          fileName: /Users/fnrcomac/Documents/Asim/Asim_small.jpg
+        - id: pair_9cec4e71477c4085aa0009cca8e69696
+          name: password
+          value: "12345678"
+          description: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+        id: pair_ff3cf149ba1c48afab99e10ab522be71
+      - id: pair_7018e8c1f4ae4d178caccbcadd3c97da
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667511114773
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_59ff01df27284a91a1e0cc343b115a94
+    parentId: fld_35bbec5606914481a8b1dd009fec1b93
+    modified: 1670074077721
+    created: 1669698286271
+    url: "{{url}}/dashboard/doctors"
+    name: index
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_bce1f621e7c1439e82041a4b0cddb4ef
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_35bbec5606914481a8b1dd009fec1b93
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669698286261
+    created: 1669698286261
+    name: doctors
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549697.375
+    _type: request_group
+  - _id: req_649c071bc9cf468e9990054a945f7e33
+    parentId: fld_35bbec5606914481a8b1dd009fec1b93
+    modified: 1670074077055
+    created: 1669698286281
+    url: "{{url}}/dashboard/doctors/1"
+    name: show/{doctorID}
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_6a3ea951dd2c4578b261b18bbbe6e836
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9d23a6e115dd4b4eab33a586fd1a7526
+    parentId: fld_35bbec5606914481a8b1dd009fec1b93
+    modified: 1669698286279
+    created: 1669698286279
+    url: "{{url}}/dashboard/doctors/5"
+    name: destroy/{doctorID}
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_800252af41994071b9de06cb301d41ce
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_bb250e288f28430d89168f08bf11c38f
+    parentId: fld_35bbec5606914481a8b1dd009fec1b93
+    modified: 1669698286274
+    created: 1669698286274
+    url: "{{url}}/dashboard/doctors"
+    name: store
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "id": 1,
+            "user_id": 1,
+            "department_id": 1,
+            "experience_years": 5,
+            "place_of_study": "University of KSA",
+            "image": "",
+            "certificates": "string",
+            "social_media": "string",
+            "about_the_doctor": "string",
+            "rating_percentage": 1,
+            "consultation_price": 1,
+            "skills": "string",
+            "iqama": "string",
+            "work_experience": "string",
+            "authority_card": "string",
+            "health_affairs_licensing": "string",
+            "is_verified": 1,
+            "is_receiving_appointments": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_ff3cf149ba1c48afab99e10ab522be71
+      - id: pair_7018e8c1f4ae4d178caccbcadd3c97da
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_143700412d1a4f588985d18a71f96870
+    parentId: fld_35bbec5606914481a8b1dd009fec1b93
+    modified: 1669698286277
+    created: 1669698286277
+    url: "{{url}}/dashboard/doctors/1"
+    name: update/{doctorID}
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_df501dd94b6a4655b3cb8e98dfad2005
+      - id: pair_2aef2db9c73d4987a21dfbc9083956e4
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8938b444751e4b21aeb29d59dd35065c
+    parentId: fld_143662f717f043f0b48ed86cf8f374ca
+    modified: 1670074081617
+    created: 1667738133285
+    url: "{{url}}/dashboard/patients"
+    name: index
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_13af70deefd24c13ac03e4f595dab864
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_143662f717f043f0b48ed86cf8f374ca
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669618305607
+    created: 1667738133279
+    name: patients
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549694.25
+    _type: request_group
+  - _id: req_097f17a7d8a1416e877a5e52b11610a7
+    parentId: fld_143662f717f043f0b48ed86cf8f374ca
+    modified: 1670071472587
+    created: 1667738133302
+    url: "{{url}}/dashboard/patients/1"
+    name: show/{patientID}
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_14161daf97fe48b3928db3e0639cccb2
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5616c85e62974f4a9357c45a18858d95
+    parentId: fld_143662f717f043f0b48ed86cf8f374ca
+    modified: 1669697556421
+    created: 1667738133298
+    url: "{{url}}/dashboard/patients/5"
+    name: destroy/{patientID}
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_01e3f1ecacfe43ddaaa44eeb1ead09ab
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_427ab6fa5fb4457f987d38f59e8075c3
+    parentId: fld_143662f717f043f0b48ed86cf8f374ca
+    modified: 1674028386646
+    created: 1667738133291
+    url: "{{url}}/dashboard/patients"
+    name: store
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"fname": "Mohamed",
+        	"lname": "Ali",
+        	"iqama": "1234567810",
+        	"phone": "+966500000005",
+        	"password": "12345678",
+        	"confirm_password": "12345678",
+        	"user_type": "patient",
+        	"fcm_token":"fEkVeHdJJxwNWoP0DsbibAnQp8shNv2tdRjXcs4Q"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_71d3bce220cc4dd9b8553ef96b6c4a1f
+      - id: pair_3cf098c1b34d489f898ecb52021c0edc
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_561a9e96dfa946bf9dea63b3cc57f589
+    parentId: fld_143662f717f043f0b48ed86cf8f374ca
+    modified: 1669697573579
+    created: 1667738133295
+    url: "{{url}}/dashboard/patients/1"
+    name: update/{patientID}
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_80cd7bb3038347a6bb3bf3814b5605c1
+      - id: pair_b803fde634984ca48bf03d0fbf2d22c6
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c7b702ffbb474f82ab2b957bb6cddb2d
+    parentId: fld_cf6e470a1d7b4c5fa320251380c89fba
+    modified: 1670222415276
+    created: 1668488415867
+    url: "{{url}}/dashboard/another-patiants"
+    name: index
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_f49cfe8ac1924c1388e0b9e07d621fd3
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_cf6e470a1d7b4c5fa320251380c89fba
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669618331900
+    created: 1668488415865
+    name: another-patiants
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549691.125
+    _type: request_group
+  - _id: req_69cc4e19b53647c79d5856c9bce3ec07
+    parentId: fld_cf6e470a1d7b4c5fa320251380c89fba
+    modified: 1670076584015
+    created: 1668488415878
+    url: "{{url}}/dashboard/another-patiants/1"
+    name: show/{another-patiants}
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: Authorization
+        value: "{{token}}"
+        id: pair_8ef958bcde3640cf80fc9f634a1feb2e
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8981994454424d2f9a400280e366e64d
+    parentId: fld_cf6e470a1d7b4c5fa320251380c89fba
+    modified: 1670076588552
+    created: 1668488415875
+    url: "{{url}}/dashboard/another-patiants/5"
+    name: destroy/{another-patiants}
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_c91c398a6f604c6680548c51baa35ccf
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_80956313be094a37a18406eb72303a5e
+    parentId: fld_cf6e470a1d7b4c5fa320251380c89fba
+    modified: 1670071725756
+    created: 1668488415870
+    url: "{{url}}/dashboard/another-patiants"
+    name: store
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_8d32c32f0df0440d88602c4f0f133394
+      - id: pair_081f3ceb3e9a4490ae83d259600254a3
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d25cc455e63f4dd28feb7eb8ce1bd073
+    parentId: fld_cf6e470a1d7b4c5fa320251380c89fba
+    modified: 1670071734864
+    created: 1668488415873
+    url: "{{url}}/dashboard/another-patiants/1"
+    name: update/{another-patiants}
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_9779fe85945841399b51a206ea8a3ed7
+      - id: pair_997a0998bcdd4e0a8de25dc3fbef369b
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1cce39c02579438b9f3e8bab8389b754
+    parentId: fld_f015a77a511e4855b6e9d674714b1487
+    modified: 1670077013333
+    created: 1669279553556
+    url: "{{url}}/dashboard/permissions"
+    name: index
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_40282afec86e419cb02eef1ef7e4127f
+        name: Content-Type
+        value: application/json
+        description: ""
+      - id: pair_46d7d4541ea743648e3a0aa5068b79da
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669279553556
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_f015a77a511e4855b6e9d674714b1487
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669548006685
+    created: 1669279549613
+    name: permissions
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549688
+    _type: request_group
+  - _id: req_7c02e0e6230b4419b8af077d110e8a8e
+    parentId: fld_f015a77a511e4855b6e9d674714b1487
+    modified: 1670076866818
+    created: 1669286096295
+    url: "{{url}}/dashboard/permissions/1"
+    name: show/{permissions}
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_40282afec86e419cb02eef1ef7e4127f
+        name: Content-Type
+        value: application/json
+        description: ""
+      - id: pair_46d7d4541ea743648e3a0aa5068b79da
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669278471695.875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5fd05034465f4a6aa2353a5ce193da96
+    parentId: fld_f015a77a511e4855b6e9d674714b1487
+    modified: 1669889752308
+    created: 1669285935769
+    url: "{{url}}/dashboard/permissions"
+    name: store
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "return doctor",
+        	"guard_name": "web"
+        }
+    parameters: []
+    headers:
+      - id: pair_40282afec86e419cb02eef1ef7e4127f
+        name: Content-Type
+        value: application/json
+        description: ""
+      - id: pair_46d7d4541ea743648e3a0aa5068b79da
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669275226115.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ebd3db851ed548d6b38a514ef1b8b397
+    parentId: fld_f015a77a511e4855b6e9d674714b1487
+    modified: 1670071771396
+    created: 1669286069631
+    url: "{{url}}/dashboard/permissions/1"
+    name: update/{permissions}
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "create",
+        	"guard_name": "web"
+        }
+    parameters: []
+    headers:
+      - id: pair_40282afec86e419cb02eef1ef7e4127f
+        name: Content-Type
+        value: application/json
+        description: ""
+      - id: pair_46d7d4541ea743648e3a0aa5068b79da
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669273062395.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_734a6ea999fc45a9a17653286b9140b3
+    parentId: fld_f015a77a511e4855b6e9d674714b1487
+    modified: 1670071776380
+    created: 1669286112463
+    url: "{{url}}/dashboard/permissions/10"
+    name: destroy/{permissions}
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_11518d432b1c4a1289cd4c5bce167b4e
+        name: Content-Type
+        value: application/json
+        description: ""
+      - id: pair_46d7d4541ea743648e3a0aa5068b79da
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669271980535.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b719aed73d87477d8d30d9de81c6d2d6
+    parentId: fld_f015a77a511e4855b6e9d674714b1487
+    modified: 1670071773416
+    created: 1669286199306
+    url: "{{url}}/dashboard/permissions/assign"
+    name: assign_ role_has_permissions
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"role": "admin",
+        	"permission": ["create", "read", "update", "delete"]
+        }
+    parameters: []
+    headers:
+      - id: pair_40282afec86e419cb02eef1ef7e4127f
+        name: Content-Type
+        value: application/json
+        description: ""
+      - id: pair_46d7d4541ea743648e3a0aa5068b79da
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669271980485.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6350409786824495b8fe96b0d2aa5334
+    parentId: fld_f015a77a511e4855b6e9d674714b1487
+    modified: 1670071777069
+    created: 1669286453456
+    url: "{{url}}/dashboard/permissions/revoke"
+    name: revoke_ role_has_permissions
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"role": "doctor",
+        	"permission": ["create", "read", "update", "delete"]
+        }
+    parameters: []
+    headers:
+      - id: pair_40282afec86e419cb02eef1ef7e4127f
+        name: Content-Type
+        value: application/json
+        description: ""
+      - id: pair_46d7d4541ea743648e3a0aa5068b79da
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669271980435.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_15b96a9c167f4782b1565805425b146a
+    parentId: fld_f015a77a511e4855b6e9d674714b1487
+    modified: 1670071774131
+    created: 1669883698996
+    url: "{{url}}/dashboard/permissions/assign"
+    name: assign_ model_has_permissions
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"role": "admin",
+        	"permission": ["create", "read", "update", "delete"]
+        }
+    parameters: []
+    headers:
+      - id: pair_40282afec86e419cb02eef1ef7e4127f
+        name: Content-Type
+        value: application/json
+        description: ""
+      - id: pair_46d7d4541ea743648e3a0aa5068b79da
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669271980385.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_98a3ef25739941658ab222a7fc814796
+    parentId: fld_f015a77a511e4855b6e9d674714b1487
+    modified: 1670071775183
+    created: 1669883711224
+    url: "{{url}}/dashboard/permissions/revoke"
+    name: revoke_ model_has_permissions
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"role": "doctor",
+        	"permission": ["create", "read", "update", "delete"]
+        }
+    parameters: []
+    headers:
+      - id: pair_40282afec86e419cb02eef1ef7e4127f
+        name: Content-Type
+        value: application/json
+        description: ""
+      - id: pair_46d7d4541ea743648e3a0aa5068b79da
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669271980335.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_56b695d501004a7c948fa7cbc6a67c62
+    parentId: fld_ac8455280ad240049cd8f1ce1e6c9ecb
+    modified: 1674105085680
+    created: 1669287147593
+    url: "{{url}}/dashboard/roles?page=1"
+    name: index
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_40282afec86e419cb02eef1ef7e4127f
+        name: Content-Type
+        value: application/json
+        description: ""
+      - id: pair_46d7d4541ea743648e3a0aa5068b79da
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669279553556
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_ac8455280ad240049cd8f1ce1e6c9ecb
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669548008498
+    created: 1669287147588
+    name: roles
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549663
+    _type: request_group
+  - _id: req_7029db42df4f417eaeacb15942888132
+    parentId: fld_ac8455280ad240049cd8f1ce1e6c9ecb
+    modified: 1669891893451
+    created: 1669287147604
+    url: "{{url}}/dashboard/roles/1"
+    name: show
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_40282afec86e419cb02eef1ef7e4127f
+        name: Content-Type
+        value: application/json
+        description: ""
+      - id: pair_46d7d4541ea743648e3a0aa5068b79da
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669277389835.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4b11a5f66cb54f7583fb46fe2666721c
+    parentId: fld_ac8455280ad240049cd8f1ce1e6c9ecb
+    modified: 1669890299430
+    created: 1669287147600
+    url: "{{url}}/dashboard/roles"
+    name: store
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "editor",
+        	"permissions": ["create", "read", "update", "delete"]
+        }
+    parameters: []
+    headers:
+      - id: pair_40282afec86e419cb02eef1ef7e4127f
+        name: Content-Type
+        value: application/json
+        description: ""
+      - id: pair_46d7d4541ea743648e3a0aa5068b79da
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669275226115.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7d75ce7ad5cc4f4fb7c2038fcf003498
+    parentId: fld_ac8455280ad240049cd8f1ce1e6c9ecb
+    modified: 1669890302429
+    created: 1669287147603
+    url: "{{url}}/dashboard/roles/5"
+    name: update
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "editors",
+        	"permissions": ["create", "read", "update", "delete"]
+        }
+    parameters: []
+    headers:
+      - id: pair_40282afec86e419cb02eef1ef7e4127f
+        name: Content-Type
+        value: application/json
+        description: ""
+      - id: pair_46d7d4541ea743648e3a0aa5068b79da
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669274414720.4062
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_60a50d44c7584d079e7207e678b289d5
+    parentId: fld_ac8455280ad240049cd8f1ce1e6c9ecb
+    modified: 1669617350044
+    created: 1669287147605
+    url: "{{url}}/dashboard/roles/5"
+    name: destroy
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_471bdf2b507649dbbcb044dc88278c9c
+        name: Content-Type
+        value: application/json
+        description: ""
+      - id: pair_46d7d4541ea743648e3a0aa5068b79da
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669274009022.8594
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8d86d23bbf52481db73ff1df39553112
+    parentId: fld_a248485e430a41479881e93aa7e6fc56
+    modified: 1670222426585
+    created: 1667737995943
+    url: "{{url}}/dashboard/appointments"
+    name: appointments
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_51ee4b35736e41c4819500e2a4e16611
+        name: Content-Type
+        value: application/json
+        description: ""
+      - id: pair_357290e1718647fc894b18e480703d1f
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_a248485e430a41479881e93aa7e6fc56
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669612136126
+    created: 1667737995939
+    name: appointments
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549619.25
+    _type: request_group
+  - _id: req_915c8f1ca6ab4609a0cb25c27606357d
+    parentId: fld_a248485e430a41479881e93aa7e6fc56
+    modified: 1670074117383
+    created: 1667737995956
+    url: "{{url}}/dashboard/appointments/1"
+    name: appointments
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_bc2df7bdd608457b9f467e98e0e4e4f3
+        name: Content-Type
+        value: application/json
+        description: ""
+      - id: pair_021276bb160449f1920bb8a96fc46617
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_791f2e6153774cef97759124c2b28546
+    parentId: fld_a248485e430a41479881e93aa7e6fc56
+    modified: 1669617434335
+    created: 1667737995953
+    url: "{{url}}/dashboard/appointments/12"
+    name: appointments
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c9ea3b70a8584f6495cb95a181c3cab7
+    parentId: fld_a248485e430a41479881e93aa7e6fc56
+    modified: 1669617439182
+    created: 1667737995949
+    url: "{{url}}/dashboard/appointments"
+    name: appointments
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        		"doctor_id": 1,
+        		"patient_id": 1,
+        		"type": 1,
+        		"time": "10:00",
+        		"date":  "2022-11-14",
+        		"number": "123456",
+        		"duration": "30",
+        		"reason": "reason",
+        		"for_another_patient": 0,
+        		"cancel": 0,
+        		"reject": 0
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_bf3575be3d074f4696020777902de65a
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2f0b583507774bf281ef8b8077bd8adf
+    parentId: fld_a248485e430a41479881e93aa7e6fc56
+    modified: 1669617453291
+    created: 1667737995952
+    url: "{{url}}/dashboard/appointments/12"
+    name: appointments
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        		"doctor_id": 1,
+        		"patient_id": 1,
+        		"type": 1,
+        		"time": "10:00",
+        		"date":  "2022-11-14",
+        		"number": "123456",
+        		"duration": "30",
+        		"reason": "reason reason reason reason reason reason reason reason reason",
+        		"for_another_patient": 0,
+        		"cancel": 0,
+        		"reject": 0
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_d5179f6abe434a4c9456ff7544cb98ac
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ca391efe90d34b1fae9ebc4006fffc2d
+    parentId: fld_c3888afdff4049a7bbcfe223d79b261b
+    modified: 1670222423859
+    created: 1668488475599
+    url: "{{url}}/dashboard/available-appointments"
+    name: available-appointments
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_e34c49c2d40545e08d74cde1c8b1bdb0
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_c3888afdff4049a7bbcfe223d79b261b
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669612137467
+    created: 1668488475594
+    name: available-appointments
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549616.125
+    _type: request_group
+  - _id: req_9433f34de5a1436085321d1c1e2b917d
+    parentId: fld_c3888afdff4049a7bbcfe223d79b261b
+    modified: 1670140268558
+    created: 1668488475611
+    url: "{{url}}/dashboard/available-appointments/1"
+    name: available-appointments
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_1e433f9c6c5443498374e78958e03e23
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3b32dc83be9048d79299139a896a7754
+    parentId: fld_c3888afdff4049a7bbcfe223d79b261b
+    modified: 1669619833191
+    created: 1668488475609
+    url: "{{url}}/dashboard/available-appointments/5"
+    name: available-appointments
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_651975e3e61f40feabb62091b2650aa0
+        name: Authorization
+        value: ""
+        description: ""
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_44b488fc3f90414d9f0e79b375c11418
+    parentId: fld_c3888afdff4049a7bbcfe223d79b261b
+    modified: 1669619835015
+    created: 1668488475605
+    url: "{{url}}/dashboard/available-appointments"
+    name: available-appointments
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_2eea3d98632a4a7b9432ad7daafa31a7
+      - id: pair_86b9a32091914945babd8c06471e78fd
+        name: Authorization
+        value: ""
+        description: ""
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e2640b263ddb49e3bc5534f9f79e9966
+    parentId: fld_c3888afdff4049a7bbcfe223d79b261b
+    modified: 1669619837314
+    created: 1668488475607
+    url: "{{url}}/dashboard/available-appointments/1"
+    name: available-appointments
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_810ba45410ed45358847298dcb2eb132
+      - id: pair_8a112df81c0b45318b78cff784a1cf05
+        name: Authorization
+        value: ""
+        description: ""
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f7722760dfe644e88e251e2e71fbefd3
+    parentId: fld_be553a116f314653b76e9a947c64ca99
+    modified: 1670222432446
+    created: 1667720414898
+    url: "{{url}}/dashboard/cities"
+    name: cities
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_1d4bae1009ad4c6b8a6853d42d60282b
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_be553a116f314653b76e9a947c64ca99
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669612139935
+    created: 1667720414894
+    name: cities
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549614.5625
+    _type: request_group
+  - _id: req_42f673c8ebb34b3988d72a4f8fe0617f
+    parentId: fld_be553a116f314653b76e9a947c64ca99
+    modified: 1670140349132
+    created: 1667720414912
+    url: "{{url}}/dashboard/cities/1"
+    name: cities
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_b6a8a0b9e7024d36a342f440a83ef5d9
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6188f5092b2e44989f990b48b87860fc
+    parentId: fld_be553a116f314653b76e9a947c64ca99
+    modified: 1669619844893
+    created: 1667720414910
+    url: "{{url}}/dashboard/cities/4"
+    name: cities
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_01bba4c34bab41c7bfe1265a01321ed6
+        name: Authorization
+        value: ""
+        description: ""
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0d75fc8a4d7f49fda13cb3bbd246c72e
+    parentId: fld_be553a116f314653b76e9a947c64ca99
+    modified: 1669619849845
+    created: 1667720414905
+    url: "{{url}}/dashboard/cities"
+    name: cities
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"country_id": 6
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_6c9895d7c1cc406ebfdafcfd24f302db
+      - id: pair_51f6ab9809d648f2a8b77cf4fc5d9768
+        name: Authorization
+        value: ""
+        description: ""
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6f3acd4822ab443284e4d829d587c7d4
+    parentId: fld_be553a116f314653b76e9a947c64ca99
+    modified: 1669619847075
+    created: 1667720414908
+    url: "{{url}}/dashboard/cities/4"
+    name: cities
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test test",
+        	"country_id": 5
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_7dcdfdb818614e2796fea0f267591722
+      - id: pair_830c05da38a1495ea976ab039d80ac95
+        name: Authorization
+        value: ""
+        description: ""
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7f6cee421750427896f3c699d709a119
+    parentId: fld_027f3ef3d68b43018bcee4f6617f61b3
+    modified: 1670222441719
+    created: 1667721692322
+    url: "{{url}}/dashboard/clinics"
+    name: clinics
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_e6fd497f41664ef680c1d5fcf9c8a287
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_027f3ef3d68b43018bcee4f6617f61b3
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669612141129
+    created: 1667721692315
+    name: clinics
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549613.7812
+    _type: request_group
+  - _id: req_d32a2745b4a44eaf916ae7105ff36dcb
+    parentId: fld_027f3ef3d68b43018bcee4f6617f61b3
+    modified: 1670222438993
+    created: 1667721692334
+    url: "{{url}}/dashboard/clinics/1"
+    name: clinics
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_736a7f4177de41b382f14c9abab9dd1b
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c1732b91b6254a5fa92186e6375919b1
+    parentId: fld_027f3ef3d68b43018bcee4f6617f61b3
+    modified: 1669617520012
+    created: 1667721692333
+    url: "{{url}}/dashboard/clinics/5"
+    name: clinics
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_42b9633e03dd4d7d952bf8f95264496f
+    parentId: fld_027f3ef3d68b43018bcee4f6617f61b3
+    modified: 1669617522695
+    created: 1667721692328
+    url: "{{url}}/dashboard/clinics"
+    name: clinics
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_33cfa1dbb32040f79bb53baa92356454
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d0c72854e8f44e52af0101ccca262bbe
+    parentId: fld_027f3ef3d68b43018bcee4f6617f61b3
+    modified: 1669617525979
+    created: 1667721692331
+    url: "{{url}}/dashboard/clinics/5"
+    name: clinics
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "testtest"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_c29dc452fe89483bb91baf0f37a842f4
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c0d3de89d698422ea721943c18749711
+    parentId: fld_e87d99022ea04c4ba9ebfe2add261340
+    modified: 1670222446126
+    created: 1667738065093
+    url: "{{url}}/dashboard/complaints"
+    name: complaints
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_a29f5b902c344c12a23b12f724fa642c
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_e87d99022ea04c4ba9ebfe2add261340
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669612143799
+    created: 1667738065091
+    name: complaints
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549613.3906
+    _type: request_group
+  - _id: req_43b64dd256c141e48f7a9c988942ea56
+    parentId: fld_e87d99022ea04c4ba9ebfe2add261340
+    modified: 1670222449251
+    created: 1667738065104
+    url: "{{url}}/dashboard/complaints/5"
+    name: complaints
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_6f7ffa4b92e4401f8e631345da65ec10
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_368e1c84ab764be7a71fa656faf7f798
+    parentId: fld_e87d99022ea04c4ba9ebfe2add261340
+    modified: 1669617548281
+    created: 1667738065102
+    url: "{{url}}/dashboard/complaints/5"
+    name: complaints
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_fcf030774c0a4ad985a2dcd0830afd44
+    parentId: fld_e87d99022ea04c4ba9ebfe2add261340
+    modified: 1669617551300
+    created: 1667738065098
+    url: "{{url}}/dashboard/complaints"
+    name: complaints
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_11a8df6928d94ba8a2c5f8f51c515197
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0245fb9e63044affb6255726d84168c1
+    parentId: fld_e87d99022ea04c4ba9ebfe2add261340
+    modified: 1669617553767
+    created: 1667738065100
+    url: "{{url}}/dashboard/complaints/1"
+    name: complaints
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_28408ddcfea042e9b8c786afdcde106f
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d785b99bb03e42f7a726dd0b00435066
+    parentId: fld_d724ff5a309d4948b3990ca9398204c2
+    modified: 1670222459005
+    created: 1668488522256
+    url: "{{url}}/dashboard/consultations"
+    name: consultations
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_f4ffeae296cc4cb08b4607a8bec75d8f
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_d724ff5a309d4948b3990ca9398204c2
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669612145337
+    created: 1668488522252
+    name: consultations
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549613.1953
+    _type: request_group
+  - _id: req_b981afd1957540d2b71b91e2bc7c9c88
+    parentId: fld_d724ff5a309d4948b3990ca9398204c2
+    modified: 1670222459759
+    created: 1668488522268
+    url: "{{url}}/dashboard/consultations/1"
+    name: consultations
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_8e9082b25bf5405b96d514dcadd2f14b
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f5e25c7ee59445b5b4795a8668886cdf
+    parentId: fld_d724ff5a309d4948b3990ca9398204c2
+    modified: 1669617563740
+    created: 1668488522267
+    url: "{{url}}/dashboard/consultations/5"
+    name: consultations
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9d948a1abd2543c0852f5bdc73b14a93
+    parentId: fld_d724ff5a309d4948b3990ca9398204c2
+    modified: 1669617566532
+    created: 1668488522263
+    url: "{{url}}/dashboard/consultations"
+    name: consultations
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_835663ff0bf1481082f6bd847fcbe57d
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1fe720becd5a4c4e982e0527c057a171
+    parentId: fld_d724ff5a309d4948b3990ca9398204c2
+    modified: 1669617569589
+    created: 1668488522265
+    url: "{{url}}/dashboard/consultations/1"
+    name: consultations
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_2cb4465572d242cc841b3cce111e2f1b
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_eb38b051ddb24051806cd9691dd78c5d
+    parentId: fld_4b11cd157bb94d5d8d4c8bf2413eb2cf
+    modified: 1670222453152
+    created: 1667718903748
+    url: "{{url}}/dashboard/countries"
+    name: countries
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_a50e4311d958477990c3b6befe4dac71
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_4b11cd157bb94d5d8d4c8bf2413eb2cf
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669612146391
+    created: 1667718901789
+    name: countries
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549613.0977
+    _type: request_group
+  - _id: req_a4372b99feaf4e2fb053f48d5aed04bb
+    parentId: fld_4b11cd157bb94d5d8d4c8bf2413eb2cf
+    modified: 1670222455936
+    created: 1667720086312
+    url: "{{url}}/dashboard/countries/1"
+    name: countries
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_ac2be3210471460eb6d924cffd690d8f
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_48d5635a49c341b5943cff833f17d3bb
+    parentId: fld_4b11cd157bb94d5d8d4c8bf2413eb2cf
+    modified: 1669617583046
+    created: 1667719721874
+    url: "{{url}}/dashboard/countries/5"
+    name: countries
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_67d364a64c6c47f891b0309097cae16e
+    parentId: fld_4b11cd157bb94d5d8d4c8bf2413eb2cf
+    modified: 1669617589114
+    created: 1667718924173
+    url: "{{url}}/dashboard/countries"
+    name: countries
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_5334cf5cc1d74de58e8bac5cd23fee7b
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d13301bd06bc490b9d30e227250d5214
+    parentId: fld_4b11cd157bb94d5d8d4c8bf2413eb2cf
+    modified: 1669617592012
+    created: 1667719708846
+    url: "{{url}}/dashboard/countries/5"
+    name: countries
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "testtest"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_9f3d5f15eaf544b9b1be14098b933021
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8ff6318fb6ee4b48b3c96ed04ff42027
+    parentId: fld_bf998d008ceb4074ad082f6090bf568f
+    modified: 1670142034352
+    created: 1668488563756
+    url: "{{url}}/dashboard/coupons"
+    name: coupons
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_7cdb0716a6314914a1abed8eaceaac1b
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_bf998d008ceb4074ad082f6090bf568f
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669612147411
+    created: 1668488563751
+    name: coupons
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549613.0488
+    _type: request_group
+  - _id: req_6218946c6cfb441b8a94d59c7e76da5b
+    parentId: fld_bf998d008ceb4074ad082f6090bf568f
+    modified: 1670074248573
+    created: 1668488563769
+    url: "{{url}}/dashboard/coupons/1"
+    name: coupons
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_335e8cb55b9f4fb7bee6173a19cb3f25
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ae7ec1fd54b04889a74bccd601e3414b
+    parentId: fld_bf998d008ceb4074ad082f6090bf568f
+    modified: 1669617601880
+    created: 1668488563768
+    url: "{{url}}/dashboard/coupons/5"
+    name: coupons
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_20d69c603490407a8b067a38084b4e49
+    parentId: fld_bf998d008ceb4074ad082f6090bf568f
+    modified: 1669617604733
+    created: 1668488563763
+    url: "{{url}}/dashboard/coupons"
+    name: coupons
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_5e67ac0e2bee41f2b64ed5d3250b9d16
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_fd0923f49227472997f40456dd318a99
+    parentId: fld_bf998d008ceb4074ad082f6090bf568f
+    modified: 1669617607999
+    created: 1668488563765
+    url: "{{url}}/dashboard/coupons/1"
+    name: coupons
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_41ab3e13b0714186b88b8969f43e3e5f
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_efa942e90c824749becd70d3a51023f3
+    parentId: fld_52a3e5def90a498c88ff98ec153f1edc
+    modified: 1670074256885
+    created: 1667721699387
+    url: "{{url}}/dashboard/departments"
+    name: departments
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_2ffdf5b3e9484c05b55566ce4347e3c0
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_52a3e5def90a498c88ff98ec153f1edc
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669612148543
+    created: 1667721699383
+    name: departments
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549613.0244
+    _type: request_group
+  - _id: req_1203e700abdc4003aad848cb414ebe0d
+    parentId: fld_52a3e5def90a498c88ff98ec153f1edc
+    modified: 1670074265584
+    created: 1667721699401
+    url: "{{url}}/dashboard/departments/5"
+    name: departments
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_06133cae5f404ff5bb9c02e10b96bfc6
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d578eb49119c41c48e612cb16e78903d
+    parentId: fld_52a3e5def90a498c88ff98ec153f1edc
+    modified: 1669617614753
+    created: 1667721699400
+    url: "{{url}}/dashboard/departments/5"
+    name: departments
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d017139adf9842c89e43819ff92b3fdb
+    parentId: fld_52a3e5def90a498c88ff98ec153f1edc
+    modified: 1669617620361
+    created: 1667721699394
+    url: "{{url}}/dashboard/departments"
+    name: departments
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_9e28c7cc645746f9902dc9e5b6be8a49
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f31b274885714b6082f2450ec63cbff5
+    parentId: fld_52a3e5def90a498c88ff98ec153f1edc
+    modified: 1669617623336
+    created: 1667721699398
+    url: "{{url}}/dashboard/departments/1"
+    name: departments
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_3a6120be314c4efab7ca18bb367601a8
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cf3f37fce0cf467ea4209ddcdf42ba9d
+    parentId: fld_844e9d4245e441ec9f5e8c1c46731a6c
+    modified: 1670223607060
+    created: 1667738033484
+    url: "{{url}}/dashboard/invoices"
+    name: invoices
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_f12aebebafa1407cbe0a05c974220223
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_844e9d4245e441ec9f5e8c1c46731a6c
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669612152796
+    created: 1667738033479
+    name: invoices
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549613.006
+    _type: request_group
+  - _id: req_deb0f0d9ade843eaa7d7fb432309340e
+    parentId: fld_844e9d4245e441ec9f5e8c1c46731a6c
+    modified: 1670074314073
+    created: 1667738033497
+    url: "{{url}}/dashboard/invoices/5"
+    name: invoices
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_dadc42dc4b414a6d829470b3bbc3d525
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_80f7479795b94008bec884d527600e19
+    parentId: fld_844e9d4245e441ec9f5e8c1c46731a6c
+    modified: 1669617651151
+    created: 1667738033495
+    url: "{{url}}/dashboard/invoices/5"
+    name: invoices
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_241d96dbbda8456ba911977eb376c36d
+    parentId: fld_844e9d4245e441ec9f5e8c1c46731a6c
+    modified: 1669617653607
+    created: 1667738033490
+    url: "{{url}}/dashboard/invoices"
+    name: invoices
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_1c640c62f3624047ba40516075597033
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e165c5d8cec3477eae0fe8334ed0a878
+    parentId: fld_844e9d4245e441ec9f5e8c1c46731a6c
+    modified: 1669617656157
+    created: 1667738033493
+    url: "{{url}}/dashboard/invoices/1"
+    name: invoices
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_2589fdb2879c49c9aff93e6488cf6d0d
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_86f4386606d14347a0d2c4bbfbcf6fc3
+    parentId: fld_d48de1434ee2461ebfe9e5675083e8d7
+    modified: 1670221554602
+    created: 1668489725249
+    url: "{{url}}/dashboard/medical-questions"
+    name: medical-questions
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_f80adeb8b7e24e8da913271056f54072
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_d48de1434ee2461ebfe9e5675083e8d7
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669612154145
+    created: 1668489725246
+    name: medical-questions
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549613.003
+    _type: request_group
+  - _id: req_52416170370140cdb4aae7a539ec53d0
+    parentId: fld_d48de1434ee2461ebfe9e5675083e8d7
+    modified: 1670222107179
+    created: 1668489725257
+    url: "{{url}}/dashboard/medical-questions/5"
+    name: medical-questions
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_ea1c6abe73c0439a8eb047f6d763b04f
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b448fff6d24049229f9648e2588f86f9
+    parentId: fld_d48de1434ee2461ebfe9e5675083e8d7
+    modified: 1669617665499
+    created: 1668489725256
+    url: "{{url}}/dashboard/medical-questions/5"
+    name: medical-questions
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4bda4daa6450436e9da0657163d1ca5c
+    parentId: fld_d48de1434ee2461ebfe9e5675083e8d7
+    modified: 1669617667788
+    created: 1668489725253
+    url: "{{url}}/dashboard/medical-questions"
+    name: medical-questions
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_cba23c2ef7d84d2aac4d0143af6eee9f
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e3e2418735a74477b91ca02a7eb3adba
+    parentId: fld_d48de1434ee2461ebfe9e5675083e8d7
+    modified: 1669617670343
+    created: 1668489725255
+    url: "{{url}}/dashboard/medical-questions/1"
+    name: medical-questions
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_a1244a5622914486992257068850242a
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4caff3b40f21499bbb5244ffc4c5f311
+    parentId: fld_7c0b0967a235452494a999696f44321c
+    modified: 1670221359511
+    created: 1668489769704
+    url: "{{url}}/dashboard/medicines"
+    name: medicines
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_182b79097c72428aae9fa9a88ca16658
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_7c0b0967a235452494a999696f44321c
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669612155416
+    created: 1668489769702
+    name: medicines
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549613.0015
+    _type: request_group
+  - _id: req_03863e4b87e649ea85a75fe6eca79385
+    parentId: fld_7c0b0967a235452494a999696f44321c
+    modified: 1670074359556
+    created: 1668489769714
+    url: "{{url}}/dashboard/medicines/5"
+    name: medicines
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_2e8a1d4caa134186a8bdc9d105b767df
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_eb800a78691d410bbfa5a2f689ee7944
+    parentId: fld_7c0b0967a235452494a999696f44321c
+    modified: 1669617678726
+    created: 1668489769711
+    url: "{{url}}/dashboard/medicines/5"
+    name: medicines
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c7874809b59446ed8e083ba8f221b7f5
+    parentId: fld_7c0b0967a235452494a999696f44321c
+    modified: 1669617681345
+    created: 1668489769707
+    url: "{{url}}/dashboard/medicines"
+    name: medicines
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_285fbbfca9d74f33a145f433d004ae00
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a52cc6362c124f9cb5c780615a2150ec
+    parentId: fld_7c0b0967a235452494a999696f44321c
+    modified: 1669617684651
+    created: 1668489769709
+    url: "{{url}}/dashboard/medicines/1"
+    name: medicines
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_75432cd55e2e4cb2aeba9e3695f68842
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_495d327edf5f40abb9bed43fa9bc6bc0
+    parentId: fld_6909c5769f1d42c79b041f7397301e7b
+    modified: 1670221388599
+    created: 1668489831689
+    url: "{{url}}/dashboard/notes"
+    name: notes
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_54d11beeed28427fbd8dff594690bdec
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_6909c5769f1d42c79b041f7397301e7b
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669612157739
+    created: 1668489831683
+    name: notes
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549613.0007
+    _type: request_group
+  - _id: req_c9d881760dba4c359447f7bfc0d83440
+    parentId: fld_6909c5769f1d42c79b041f7397301e7b
+    modified: 1670074375398
+    created: 1668489831702
+    url: "{{url}}/dashboard/notes/5"
+    name: notes
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_7268f37a61584f0197b3df2a031daab5
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7855a7cf516c48f2a8fb2b5b6c1c8b38
+    parentId: fld_6909c5769f1d42c79b041f7397301e7b
+    modified: 1669617698282
+    created: 1668489831700
+    url: "{{url}}/dashboard/notes/5"
+    name: notes
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_787ad8416fe4471aa8114256ad84e4bc
+    parentId: fld_6909c5769f1d42c79b041f7397301e7b
+    modified: 1669617699944
+    created: 1668489831695
+    url: "{{url}}/dashboard/notes"
+    name: notes
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_6c8d86e9850d44e1a58ca65a5e76d041
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f151dfac2d3341148c0d37ff9a149864
+    parentId: fld_6909c5769f1d42c79b041f7397301e7b
+    modified: 1669617702726
+    created: 1668489831698
+    url: "{{url}}/dashboard/notes/1"
+    name: notes
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_570ee9e029824983a053ef42fb63501b
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c3f582b1b06743df88ce5174a107e704
+    parentId: fld_5bb2509c8b1e45ee8d9e0c1bf27eba3e
+    modified: 1670221406698
+    created: 1667738096796
+    url: "{{url}}/dashboard/notifications"
+    name: notifications
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_31e992c561ed40b8ab1fd0fef625d7d3
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_5bb2509c8b1e45ee8d9e0c1bf27eba3e
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669612158588
+    created: 1667738096792
+    name: notifications
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549613.0005
+    _type: request_group
+  - _id: req_f4b77d0acbdb41ab80b2dda40310622e
+    parentId: fld_5bb2509c8b1e45ee8d9e0c1bf27eba3e
+    modified: 1670221420204
+    created: 1667738096806
+    url: "{{url}}/dashboard/notifications/5"
+    name: notifications
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_a6568e86fd014fc09319391845b2a6da
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_bcd8667fded94f4e9ad25d155f9bee7b
+    parentId: fld_5bb2509c8b1e45ee8d9e0c1bf27eba3e
+    modified: 1669617715944
+    created: 1667738096804
+    url: "{{url}}/dashboard/notifications/5"
+    name: notifications
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_011b81643088491b99f6b786776bd3f5
+    parentId: fld_5bb2509c8b1e45ee8d9e0c1bf27eba3e
+    modified: 1669617718537
+    created: 1667738096799
+    url: "{{url}}/dashboard/notifications"
+    name: notifications
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_a9b75183aa354c76b08c5e13e8f92d49
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_66e8a85ddd644f4ebb419f1db848577b
+    parentId: fld_5bb2509c8b1e45ee8d9e0c1bf27eba3e
+    modified: 1669617722020
+    created: 1667738096802
+    url: "{{url}}/dashboard/notifications/1"
+    name: notifications
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_f47ba417fa7b431e8d5210dad3eb6ff7
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_da5cc0f826904dab8cdd41d9ceca5062
+    parentId: fld_618519fc66a941818adc5fd95356066c
+    modified: 1670221424649
+    created: 1668429828753
+    url: "{{url}}/dashboard/payments"
+    name: payments
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_e59f4557ccea4f17bed951d150a8ebb7
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_618519fc66a941818adc5fd95356066c
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669612161121
+    created: 1668429828749
+    name: payments
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549613.0002
+    _type: request_group
+  - _id: req_b05bfd6ab48a4186a32d6ea0e5604eef
+    parentId: fld_618519fc66a941818adc5fd95356066c
+    modified: 1670221427943
+    created: 1668429828762
+    url: "{{url}}/dashboard/payments/1"
+    name: payments
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_124b9dc764e64a27a2af513db3f7351a
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9ee0faf8bf1742d3b150fa2160459a56
+    parentId: fld_618519fc66a941818adc5fd95356066c
+    modified: 1669617757103
+    created: 1668429828760
+    url: "{{url}}/dashboard/payments/5"
+    name: payments
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_20fd6922f4914f9cbb9e8a37e7b0c598
+    parentId: fld_618519fc66a941818adc5fd95356066c
+    modified: 1669617759780
+    created: 1668429828755
+    url: "{{url}}/dashboard/payments"
+    name: payments
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_4624d1b0a46241529d69e09918301b61
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3c4562a836f749a3a045a1693bfbc4cf
+    parentId: fld_618519fc66a941818adc5fd95356066c
+    modified: 1669617762758
+    created: 1668429828758
+    url: "{{url}}/dashboard/payments/1"
+    name: payments
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_14142ee8055641c2b1fa36e849e73298
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_50364307287544e1bd3ed9c193bce2a4
+    parentId: fld_bf22a5a4f55b400fb204a54bc7761bd1
+    modified: 1670221432580
+    created: 1667737962273
+    url: "{{url}}/dashboard/ratings"
+    name: ratings
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_93150474a7ac48cb8336896a8ab8a110
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_bf22a5a4f55b400fb204a54bc7761bd1
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669612165848
+    created: 1667737962271
+    name: ratings
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549613
+    _type: request_group
+  - _id: req_7b5075bec1ac4e9c9acbf86a5c6fc1e6
+    parentId: fld_bf22a5a4f55b400fb204a54bc7761bd1
+    modified: 1670221435628
+    created: 1667737962285
+    url: "{{url}}/dashboard/ratings/5"
+    name: ratings
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_c4ed5e93210048f29c1c9fffe57f3b32
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7ee51bdc88774540bf798ea88852d1a7
+    parentId: fld_bf22a5a4f55b400fb204a54bc7761bd1
+    modified: 1669617772977
+    created: 1667737962283
+    url: "{{url}}/dashboard/ratings/5"
+    name: ratings
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e0ab7120dd1049198023cdc8445394d5
+    parentId: fld_bf22a5a4f55b400fb204a54bc7761bd1
+    modified: 1669617776154
+    created: 1667737962276
+    url: "{{url}}/dashboard/ratings"
+    name: ratings
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_7aafe0911fb742dfafe142645983cb68
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6a8b52311ed245889306cd86be08eb0d
+    parentId: fld_bf22a5a4f55b400fb204a54bc7761bd1
+    modified: 1669617779383
+    created: 1667737962281
+    url: "{{url}}/dashboard/ratings/1"
+    name: ratings
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_76f1459508a24cb38b03ad2d7c6eae7a
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8e1b01a17ce84e6a883e0e35d85969a4
+    parentId: fld_32522efd1bea4f6792384e700b1fde4b
+    modified: 1670227190027
+    created: 1668488690502
+    url: "{{url}}/dashboard/favorites"
+    name: favorites
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: Authorization
+        value: "{{token}}"
+        id: pair_7d081c0e4eb74dcf874b109b6f9d0cce
+    authentication: {}
+    metaSortKey: -1667718903748
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_32522efd1bea4f6792384e700b1fde4b
+    parentId: fld_2d7d674f81fa4c34a2f23aa9e59e4ca9
+    modified: 1669612151395
+    created: 1668488690497
+    name: favorites
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669279549563
+    _type: request_group
+  - _id: req_ebb8c83353bc49fb9bdd732b7743c4be
+    parentId: fld_32522efd1bea4f6792384e700b1fde4b
+    modified: 1670224258543
+    created: 1668488690516
+    url: "{{url}}/dashboard/favorites/5"
+    name: favorites
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_33936a9e3990493287608b31087e20c1
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1667677345953
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ce25149db02b4643bb1425c85401144b
+    parentId: fld_32522efd1bea4f6792384e700b1fde4b
+    modified: 1669617842066
+    created: 1668488690513
+    url: "{{url}}/dashboard/favorites/5"
+    name: favorites
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1667635788158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f265c1da4e054c5f972db377199d3ba7
+    parentId: fld_32522efd1bea4f6792384e700b1fde4b
+    modified: 1669617839662
+    created: 1668488690509
+    url: "{{url}}/dashboard/favorites"
+    name: favorites
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_35bec97a4b6b4d9aa832d613284431cd
+    authentication: {}
+    metaSortKey: -1667552672568
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c07ec2753b114a80bff65a791677bf6d
+    parentId: fld_32522efd1bea4f6792384e700b1fde4b
+    modified: 1669617836977
+    created: 1668488690512
+    url: "{{url}}/dashboard/favorites/1"
+    name: favorites
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "test",
+        	"description":"description",
+        	"clinic_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_d3612296d49b4f6b80bcd0c270893f0e
+    authentication: {}
+    metaSortKey: -1667469556978
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4ee9328bb0714c059cbc1333e1ca4c78
+    parentId: fld_b9e0f119ff304eea9a0b69267d63a324
+    modified: 1674038587903
+    created: 1672731752051
+    url: "{{url}}/user/clinics?page=1"
+    name: clinics
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1672731737261
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_b9e0f119ff304eea9a0b69267d63a324
+    parentId: fld_fd689ac2f6ec4e1f86b853415dac7b4d
+    modified: 1672730795801
+    created: 1672730795801
+    name: home
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1672730795801
+    _type: request_group
+  - _id: fld_fd689ac2f6ec4e1f86b853415dac7b4d
+    parentId: wrk_3db2426480374e4a851f71d7fc719c8b
+    modified: 1672139242206
+    created: 1669270896006
+    name: doctor-patient
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669266039179
+    _type: request_group
+  - _id: req_57a752f4cd6c45bc950dfc6628ab527c
+    parentId: fld_b9e0f119ff304eea9a0b69267d63a324
+    modified: 1674038595305
+    created: 1672731771649
+    url: "{{url}}/user/doctors/best-doctors?page=1"
+    name: best-doctors
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_2c48270622f8475981cbdb9b161c168b
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1671918679007
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3e0e9d0e72bd4d8782208601080ab399
+    parentId: fld_b9e0f119ff304eea9a0b69267d63a324
+    modified: 1677581807972
+    created: 1673761172522
+    url: "{{url}}/user/doctors/department-doctors/1?page=1"
+    name: department-doctors
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1671512149880
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_99ca4f5ef89442e1bf648ef3e4efab0b
+    parentId: fld_b9e0f119ff304eea9a0b69267d63a324
+    modified: 1675751950541
+    created: 1673761232477
+    url: "{{url}}/user/doctors/search-doctors/نوال?page=1"
+    name: search-doctors
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1671308885316.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_988df8d103984291af1c654af4e576d7
+    parentId: fld_b9e0f119ff304eea9a0b69267d63a324
+    modified: 1674038635454
+    created: 1673761267043
+    url: "{{url}}/user/doctors/filter-doctors?page=1"
+    name: filter-doctors
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"consultation_price": "100-150",
+        	"experience_years": "0-5",
+        	"clinic_id": [
+        		1,
+        		2
+        	],
+        	"gender": [
+        		"male",
+        		"fmale"
+        	],
+        	"rating_percentage": 47.4
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1671207253034.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_06d64ffa923d4825bc309dc73431e278
+    parentId: fld_b9e0f119ff304eea9a0b69267d63a324
+    modified: 1674708620263
+    created: 1673761426864
+    url: "{{url}}/user/doctors/favorite-doctors"
+    name: favorites-doctors
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"doctor_id": 3
+        }
+    parameters: []
+    headers:
+      - id: pair_2c48270622f8475981cbdb9b161c168b
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+        disabled: false
+      - name: Content-Type
+        value: application/json
+        id: pair_7654c0201ebc4a378c52f925fd3b90c4
+        disabled: false
+    authentication: {}
+    metaSortKey: -1671207252984.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_02999ee5bfb9490b9b512fee1dbdbc2f
+    parentId: fld_b9e0f119ff304eea9a0b69267d63a324
+    modified: 1674707747717
+    created: 1674707013948
+    url: "{{ _.url }}/user/doctors/favorite-doctors"
+    name: favorites-doctors
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_2c48270622f8475981cbdb9b161c168b
+        name: Authorization
+        value: "{{ _.token }}"
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: -1671156436868.875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_014f7cb397074058a7f5cc9f4ac89e19
+    parentId: fld_276dcd6a642743c9876ff3e4fbeb3d5f
+    modified: 1675766861954
+    created: 1669270898675
+    url: "{{url}}/user/login"
+    name: login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"phone": "+966500000000",
+        	"password": "12345678",
+        	"fcm_token":"fEkVeHdJJxwNWoP0DsbibAnQp8shNv2tdRjXcs4Q"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_76975aa6b9a040fbb1d2ee34ad4152f1
+    authentication: {}
+    metaSortKey: -1669270898675
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_276dcd6a642743c9876ff3e4fbeb3d5f
+    parentId: fld_fd689ac2f6ec4e1f86b853415dac7b4d
+    modified: 1669548016814
+    created: 1669548016814
+    name: auth
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669548016814
+    _type: request_group
+  - _id: req_395f07c303d44e5e9c54d19958f114f3
+    parentId: fld_276dcd6a642743c9876ff3e4fbeb3d5f
+    modified: 1673351687932
+    created: 1669292953116
+    url: "{{url}}/user/register"
+    name: register
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"fname": "Mohamed",
+        	"lname": "Ali",
+        	"iqama": "1234567810",
+        	"phone": "+966500000005",
+        	"password": "12345678",
+        	"confirm_password": "12345678",
+        	"user_type": "patient",
+        	"fcm_token":"fEkVeHdJJxwNWoP0DsbibAnQp8shNv2tdRjXcs4Q"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_76975aa6b9a040fbb1d2ee34ad4152f1
+    authentication: {}
+    metaSortKey: -1669270898668.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_758c90aa933c4e2bbbfa70f93d4a1566
+    parentId: fld_276dcd6a642743c9876ff3e4fbeb3d5f
+    modified: 1673156509263
+    created: 1671945010397
+    url: "{{url}}/user/verify"
+    name: verify
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"phone": "+966500000000",
+        	"code": "4904"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_76975aa6b9a040fbb1d2ee34ad4152f1
+    authentication: {}
+    metaSortKey: -1669270898662.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0fa55bf82fa04e90b4db899dc687fdfc
+    parentId: fld_276dcd6a642743c9876ff3e4fbeb3d5f
+    modified: 1673700029540
+    created: 1671467610405
+    url: "{{url}}/user/complete-patient-profile"
+    name: complete-patient-profile
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "patienta@gmail.com",
+        	"other_phone":"+966568970184",
+        	"weight": 79,
+        	"height": 182,
+        	"birth_date": "1990-01-01",
+        	"gender": "male",
+        	"marital_status": "married",
+        	"family_member_phone": "0987654321",
+        	"psychiatrist": 1,
+        	"psychiatrist_description": "text",
+        	"disability": 1,
+        	"disability_description": "text",
+        	"health_problem": 1,
+        	"health_problem_description": "test",
+        	"medication": 1,
+        	"medication_description": "text",
+        	"habits": [
+        		"smoking",
+        		"drinking",
+        		"take drugs",
+        		"nothing"
+        	],
+        	"habits_other_details": "text",
+        	"diseases": 1,
+        	"diseases_other_details": "text"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_76975aa6b9a040fbb1d2ee34ad4152f1
+      - id: pair_6c1ab1359f1b42dbb37596e2c2da7e3e
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: -1669270898640.625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0d3a9ba50bf443129481f3a1ceeb4cb9
+    parentId: fld_276dcd6a642743c9876ff3e4fbeb3d5f
+    modified: 1674736512487
+    created: 1671467558015
+    url: "{{url}}/user/update-patient-profile"
+    name: update-patient-profile
+    description: ""
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - id: pair_1a9dceb9a01e48d79e6fa74ff063bc05
+          name: fname
+          value: منال
+          description: ""
+        - id: pair_c3f4dbdc371f4836b2b7fbca36bc28e7
+          name: lname
+          value: احمدي الغامدي
+          description: ""
+        - id: pair_cd08bd8fdd4e42409f5ceaf32f6e7b41
+          name: iqama
+          value: "2500776203"
+          description: ""
+        - id: pair_38745517ef64453caadd51b015400f4c
+          name: phone
+          value: "+966500000000"
+          description: ""
+        - id: pair_5a5e99f70ad644b7b14e7c1478c8a101
+          name: birth_date
+          value: 1990-01-01
+          description: ""
+        - id: pair_f5aab33e12ee437e822cfa3d80a67cd0
+          name: gender
+          value: male
+          description: ""
+        - id: pair_f0df9842405347d7b09ad4982d8619f9
+          name: marital_status
+          value: married
+          description: ""
+        - id: pair_281ea275735e4b04a03770191b05d40e
+          name: image
+          value: ""
+          description: ""
+          type: file
+          fileName: /Users/fnrcomac/Documents/Asim/Asim_small.jpg
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+        id: pair_76975aa6b9a040fbb1d2ee34ad4152f1
+      - id: pair_bf4ec6e3073d4070a42e3bbc20d471ba
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669270898635.1562
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_fc7b73043c444d049d20028fb0b9a04f
+    parentId: fld_276dcd6a642743c9876ff3e4fbeb3d5f
+    modified: 1672560295434
+    created: 1671467578588
+    url: "{{url}}/user/update-password"
+    name: update-password
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"old_password":"12345678",
+        	"new_password":"123456789",
+        	"confirm_password":"123456789"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_76975aa6b9a040fbb1d2ee34ad4152f1
+      - id: pair_f189692c9e0845b3a0bc1b9f9eb7ecb1
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669270898632.4219
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4ec33d19da354b97bc036937b951671f
+    parentId: fld_276dcd6a642743c9876ff3e4fbeb3d5f
+    modified: 1672560513570
+    created: 1672560483692
+    url: "{{url}}/user/forgot-password"
+    name: forgot-password
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"phone": "+966500000002"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_76975aa6b9a040fbb1d2ee34ad4152f1
+    authentication: {}
+    metaSortKey: -1669270898631.836
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1b7e1a774cfa4c27a71c6986e5cf03e7
+    parentId: fld_276dcd6a642743c9876ff3e4fbeb3d5f
+    modified: 1674105590829
+    created: 1672560525642
+    url: "{{url}}/user/reset-password"
+    name: reset-password
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"phone": "+966500000002",
+        	"code": "9578",
+        	"new_password":"123456789",
+        	"confirm_password":"123456789"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_76975aa6b9a040fbb1d2ee34ad4152f1
+      - id: pair_05bfd81cd5754fd391b17e8b15a8476d
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669270898631.543
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_08b24290ed324d9781ac2764ada828f3
+    parentId: fld_276dcd6a642743c9876ff3e4fbeb3d5f
+    modified: 1669548023706
+    created: 1669292914565
+    url: "{{url}}/user/refresh"
+    name: refresh
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_2c48270622f8475981cbdb9b161c168b
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669270898612.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1b9fa5099cd843d593d1ad614c6df1a5
+    parentId: fld_276dcd6a642743c9876ff3e4fbeb3d5f
+    modified: 1672563364700
+    created: 1669292899340
+    url: "{{url}}/user/logout"
+    name: logout
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_2c48270622f8475981cbdb9b161c168b
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669270898600
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a21b462d790c4ec8a2611f6a812e3f68
+    parentId: fld_276dcd6a642743c9876ff3e4fbeb3d5f
+    modified: 1671455524025
+    created: 1669272679995
+    url: "{{url}}/user/me"
+    name: me
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_2c48270622f8475981cbdb9b161c168b
+        name: Authorization
+        value: "{{token}}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1669270898575
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a5cb872f1e394e8aa7bd0260e95e6b56
+    parentId: fld_276dcd6a642743c9876ff3e4fbeb3d5f
+    modified: 1672568425646
+    created: 1671509258043
+    url: "{{url}}/user/complete-doctor-profile"
+    name: complete-doctor-profile
+    description: ""
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - id: pair_8aefc991b6054b1e8d4eb5c9aba38917
+          name: user_id
+          value: ""
+          description: ""
+        - id: pair_f2f0cbd626774c0eae3d361247bbd6f6
+          name: department_id
+          value: ""
+          description: ""
+        - id: pair_3a5b38f0b35d495c95432f1af9814623
+          name: experience_years
+          value: ""
+          description: ""
+        - id: pair_3b539c0c1da64a9db2fa71b2a5b29220
+          name: place_of_study
+          value: ""
+          description: ""
+        - id: pair_f42cea3e574145ff9512ad03f1e15efe
+          name: image
+          value: ""
+          description: ""
+          type: file
+        - id: pair_e0e37e84bfd342058ab77b509dd73a08
+          name: height
+          value: ""
+          description: ""
+        - id: pair_3549d49a767743e486cda6a2a981274b
+          name: weight
+          value: ""
+          description: ""
+        - id: pair_cd85cc93471643779eb7b58db68e7266
+          name: blood_pressure
+          value: ""
+          description: ""
+        - id: pair_de6cd917d32f439abc8545a084fd3855
+          name: chronic_diseases
+          value: ""
+          description: ""
+        - id: pair_4082c379f67743e0994dca847f66bf05
+          name: previous_illnesses
+          value: ""
+          description: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+        id: pair_76975aa6b9a040fbb1d2ee34ad4152f1
+    authentication: {}
+    metaSortKey: -1669270898525
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3278dd43a3194ae69fda46fa7801c24b
+    parentId: fld_276dcd6a642743c9876ff3e4fbeb3d5f
+    modified: 1672568443218
+    created: 1672136469159
+    url: "{{url}}/user/update-profile"
+    name: update-doctor-profile
+    description: ""
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - id: pair_e859fe2e94434e0da7fbf4fba0efcab3
+          name: city_id
+          value: "1"
+          description: ""
+        - id: pair_09ab6dad990a47eebd9b0ef49165b7a2
+          name: fname
+          value: Mohamed
+          description: ""
+        - id: pair_ed72a68ef4bd4524a8b47ef8b8529cde
+          name: lname
+          value: Ali
+          description: ""
+        - id: pair_48329447a9e943189bcf1c5807628dd4
+          name: username
+          value: mohali
+          description: ""
+        - id: pair_6753b04b99d7421b9774268763a70bf6
+          name: iqama
+          value: "243374753"
+          description: ""
+        - id: pair_14c6e854c1434bdc971c019e7baf62b5
+          name: phone
+          value: "+966564837544"
+          description: ""
+        - id: pair_56a3413911474555ba124957d7bc05e2
+          name: other_phone
+          value: "+966567493747"
+          description: ""
+        - id: pair_05e605843b734d03919f3cf03275e889
+          name: birth_date
+          value: 1993-01-01
+          description: ""
+        - id: pair_605ff2e0ab1645b18e09c14b8eb70c40
+          name: gender
+          value: female
+          description: ""
+        - id: pair_5b96e3689b444194abe75709b535d10b
+          name: email
+          value: mohali@gmail.com
+          description: ""
+        - id: pair_62cccfb9d34e4f85a2188844046fae91
+          name: password
+          value: "12345678"
+          description: ""
+        - id: pair_ff0269d47e22491692b091c76c8fd60f
+          name: confirm_password
+          value: "12345678"
+          description: ""
+        - id: pair_f562bf7633344e6791a41ee4f1e4af1d
+          name: image
+          value: ""
+          description: ""
+          type: file
+          fileName: /Users/fnrcomac/Documents/Asim/Asim_small.jpg
+        - id: pair_e57265bf7b144283a29d9fc943d4097e
+          name: address
+          value: Riyadh
+          description: ""
+        - id: pair_3ee71363d8f147d093c9ad069f3a19b8
+          name: user_type
+          value: patient
+          description: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+        id: pair_76975aa6b9a040fbb1d2ee34ad4152f1
+    authentication: {}
+    metaSortKey: -1669270898475
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_0166e6948e55e1bf92da8ad214bbc0c232cca805
+    parentId: wrk_3db2426480374e4a851f71d7fc719c8b
+    modified: 1674707801541
+    created: 1667368030363
+    name: Base Environment
+    data:
+      url: http://127.0.0.1:8000
+      token: Bearer 1|7XN0mZXkCMJMm5Bk5W9yxI7z0t1jcwrDWfPgawVa
+    dataPropertyOrder:
+      "&":
+        - url
+        - token
+    color: null
+    isPrivate: false
+    metaSortKey: 1667368030363
+    _type: environment
+  - _id: jar_ff7860d059cf3d2f2e62a339b3013baae7ce8a7f
+    parentId: wrk_3db2426480374e4a851f71d7fc719c8b
+    modified: 1674733825226
+    created: 1667368030364
+    name: Default Jar
+    cookies:
+      - key: XSRF-TOKEN
+        value: eyJpdiI6InkyL1V6V25kaDN3Z05zaDZwSWw4c0E9PSIsInZhbHVlIjoiVTFGdVhFQ3YwMVl2N1RDSktKTHdjRHJJWHB5QXBES2pMdW9BV2RjZllsdTZTYWs5ZXprTjlmWXNYZWZFZmVQenZaY3JFUUIzNVZxQzA5ZlBieVFVY00xRE1lT0FwWHBMZm8wRFNoUHg2WGpEM1dDOEpROWV1R3oyMmZpQTF6VlAiLCJtYWMiOiI5YWRkODVkNmI3NWU1ZmE2ODg2Y2ZlYmI5NGM1ZjhiOTQ1OWRlMDI4NDk1NWU1NjI1NGE3NDMyMTcyODg2N2U2IiwidGFnIjoiIn0%3D
+        expires: 2023-01-18T12:42:19.000Z
+        maxAge: 7200
+        domain: 127.0.0.1
+        path: /
+        extensions:
+          - samesite=lax
+        hostOnly: true
+        creation: 2022-11-06T07:16:48.193Z
+        lastAccessed: 2023-01-18T10:42:19.096Z
+        id: "6288086747964239"
+      - key: laravel_session
+        value: eyJpdiI6IlhGdERQYkFOai9KSkV4S3dwNzMwd2c9PSIsInZhbHVlIjoiZnBmQkRObXdMWk5BeTVZVHExZWplSzdGMXhXZSsrVk5uQmo1U1p3ZW9OdmxjKzRGdWZtWkpPZGpQaktPRmthOC8zMmt1QTYxdVFOWVFSeXNkQ2dxVGFwSWpDTzBGUHpLWEVHOXM5VkNRSnZTS0owNEFHcFJsdUlzZ1hSV0hjcEwiLCJtYWMiOiJlYTViOGQ5M2Y4NmM5Y2M5N2NkYTcxNzIwZDdiMzEyMTlhOTFlNTEwNWUyN2UzYjE3MjViMzA4YzJjYTVmNTg5IiwidGFnIjoiIn0%3D
+        expires: 2023-01-18T12:42:19.000Z
+        maxAge: 7200
+        domain: 127.0.0.1
+        path: /
+        httpOnly: true
+        extensions:
+          - samesite=lax
+        hostOnly: true
+        creation: 2022-11-06T07:16:48.194Z
+        lastAccessed: 2023-01-18T10:42:19.096Z
+        id: "7992880710701373"
+      - key: x-clockwork
+        value: "%7B%22requestId%22%3A%221674733824-7980-1268009416%22%2C%22version%22%3\
+          A%225.1.12%22%2C%22path%22%3A%22%5C%2F__clockwork%5C%2F%22%2C%22webPa\
+          th%22%3A%22%5C%2Fclockwork%5C%2Fapp%22%2C%22token%22%3A%22e220a6ab%22\
+          %2C%22metrics%22%3Atrue%2C%22toolbar%22%3Atrue%7D"
+        expires: 2023-01-26T11:51:24.000Z
+        maxAge: 60
+        domain: 127.0.0.1
+        path: /
+        extensions:
+          - samesite=lax
+        hostOnly: true
+        creation: 2022-11-15T11:51:52.995Z
+        lastAccessed: 2023-01-26T11:50:25.226Z
+        id: "43090045552701217"
+      - key: x-clockwork
+        value: "%7B%22requestId%22%3A%221673939382-5872-1887656887%22%2C%22version%22%3\
+          A%225.1.12%22%2C%22path%22%3A%22%5C%2F__clockwork%5C%2F%22%2C%22webPa\
+          th%22%3A%22%5C%2Fclockwork%5C%2Fapp%22%2C%22token%22%3A%22c8bf3693%22\
+          %2C%22metrics%22%3Atrue%2C%22toolbar%22%3Atrue%7D"
+        expires: 2023-01-17T07:10:42.000Z
+        maxAge: 60
+        domain: musaneda.com
+        path: /
+        secure: true
+        extensions:
+          - samesite=lax
+        hostOnly: true
+        creation: 2022-12-27T11:03:16.145Z
+        lastAccessed: 2023-01-17T07:09:43.221Z
+        id: "02640471668537625"
+      - key: XSRF-TOKEN
+        value: eyJpdiI6InhtaVliaHJjcDA5TmRETytwTExUSVE9PSIsInZhbHVlIjoiaWFnMzJpak9IcXNmei9ndHQvU3NLdExvSm04NllxTjRaWWNBZ2U5andoT2wrd3dFZm9RQWJhaGFRa1BLeCs0TWJjSTVjK0x0VTgrM1h1eFk2UnBEd1NkYlEreVFrMTc4RG5SVHF4TTl4THB5aW8rdzUrWmNEbnh1MVhnamJocE8iLCJtYWMiOiI1OWQyOTUxZGY2MTUzYWQ0OTAwYTI3NDQwYzhiMzQ0NThhNGY3OGQ5MzE5YjkyM2Q0N2IyNWMxY2EwNDE4MGVjIiwidGFnIjoiIn0%3D
+        expires: 2023-01-08T08:51:46.000Z
+        maxAge: 7200
+        domain: musaneda.com
+        path: /
+        secure: true
+        extensions:
+          - samesite=lax
+        hostOnly: true
+        creation: 2023-01-08T06:50:16.213Z
+        lastAccessed: 2023-01-08T06:51:46.456Z
+        id: "9056173959105172"
+      - key: laravel_session
+        value: eyJpdiI6IjhGTHpYemxvWUk5Z0FQMDFhUVNyUmc9PSIsInZhbHVlIjoiRnErdUVpeUhBMEMrRzJiaDVUOC9GMDdlUGVJdUNwT3puZTA3T3dPcnR4V1gwU0dkeU9FWk5jQ3lKa2hTTk14bFpUbiswVm56ZUxCdHhVYngvbXBxLzcwUzBORjdxc3l0cFYvWGlGYUowRVBraHYvczBVaGdPdWJVZHArTWdWUkEiLCJtYWMiOiIyMTAwYmMzY2VjMzJkNTg3NmU0YWFjODA3Mzc4ODRmMThlMDI4NmJjYTU0Mjg0M2ZiNGQ2YTM4NjkyNDI1NTRmIiwidGFnIjoiIn0%3D
+        expires: 2023-01-08T08:51:46.000Z
+        maxAge: 7200
+        domain: musaneda.com
+        path: /
+        secure: true
+        httpOnly: true
+        extensions:
+          - samesite=lax
+        hostOnly: true
+        creation: 2023-01-08T06:50:16.214Z
+        lastAccessed: 2023-01-08T06:51:46.456Z
+        id: "4428140596879515"
+      - key: session_id
+        value: 187f581d21fb437242cd1d2b03e92dd9ed870f0c
+        expires: 2023-04-14T14:19:57.000Z
+        maxAge: 7776000
+        domain: ada4-51-39-12-142.in.ngrok.io
+        path: /
+        httpOnly: true
+        hostOnly: true
+        creation: 2023-01-14T13:52:11.335Z
+        lastAccessed: 2023-01-14T14:19:58.037Z
+        id: "5076079477878108"
+      - key: XSRF-TOKEN
+        value: eyJpdiI6IlNsbFRGU3p0b0JrQkh5djNMREgxQUE9PSIsInZhbHVlIjoidjVIZ09sRitMMnllTUdnb1c4emVtaE0rSjM2MFMrWW00ZjdUUGo5WkpZK09zNDdQajQvZXoya1haTlVrQS8rNkpVUHIvWTV5QVJHUlhXWjhENVhlRFZBcVp4TE11Q1FnS2VuUEVCcVpjeG9ZZjdRaXcwL21oV1BCODBpNzhvaTEiLCJtYWMiOiJjMWJmNmJmMTMzYjY0ZThiMGY2ZjVmMmJmN2M2MjFlNGEyOTQ5YmQ2NjMwYTdiNmQzMDlmNzlkM2M0ZjRlMDI2IiwidGFnIjoiIn0%3D
+        expires: 2023-01-26T13:43:59.000Z
+        maxAge: 7200
+        domain: 192.168.3.190
+        path: /
+        extensions:
+          - samesite=lax
+        hostOnly: true
+        creation: 2023-01-26T11:43:57.023Z
+        lastAccessed: 2023-01-26T11:43:59.759Z
+        id: "8284449748359406"
+      - key: laravel_session
+        value: eyJpdiI6ImFWaDFUdkdNMWVwalo2QmJ2cDMxd2c9PSIsInZhbHVlIjoiTTh1VGhwM0gyM3hKaFIrd1hGaEF6M2JPZXRoRlVVS2FSK3BzTG9kSDJQV0ZneXBjWkU0WlJuSXQwT2UwUXdTREwxYW9ZZHNmMUVzblgvaWNqM1VYN0ZkYmUyUVFBLzBXQ2lVY3o2aE96Ymp1amxOY3plZmZQbHZJQVdmWlNqM3QiLCJtYWMiOiJhYmQyZTY0YmUyYmVhNTAyYjJlMTgwYzRlYWZhYzZjNWJjYjBjZWJmZWE3ZGQyNzNlZDlmMzk3ZTg4OGYwYTgxIiwidGFnIjoiIn0%3D
+        expires: 2023-01-26T13:43:59.000Z
+        maxAge: 7200
+        domain: 192.168.3.190
+        path: /
+        httpOnly: true
+        extensions:
+          - samesite=lax
+        hostOnly: true
+        creation: 2023-01-26T11:43:57.023Z
+        lastAccessed: 2023-01-26T11:43:59.759Z
+        id: "3265225917288508"
+      - key: x-clockwork
+        value: "%7B%22requestId%22%3A%221674733439-6689-861896911%22%2C%22version%22%3A\
+          %225.1.12%22%2C%22path%22%3A%22%5C%2F__clockwork%5C%2F%22%2C%22webPat\
+          h%22%3A%22%5C%2Fclockwork%5C%2Fapp%22%2C%22token%22%3A%22a3e0fc68%22%\
+          2C%22metrics%22%3Atrue%2C%22toolbar%22%3Atrue%7D"
+        expires: 2023-01-26T11:44:59.000Z
+        maxAge: 60
+        domain: 192.168.3.190
+        path: /
+        extensions:
+          - samesite=lax
+        hostOnly: true
+        creation: 2023-01-26T11:43:57.023Z
+        lastAccessed: 2023-01-26T11:43:59.759Z
+        id: "29563627213899246"
+    _type: cookie_jar
+  - _id: spc_568e99b4ed024fc6b740234451935baa
+    parentId: wrk_3db2426480374e4a851f71d7fc719c8b
+    modified: 1672139277827
+    created: 1667368030356
+    fileName: SANEDNY-API
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: env_c73c34c7c9f74f6c9d131922c1b8873a
+    parentId: env_0166e6948e55e1bf92da8ad214bbc0c232cca805
+    modified: 1675926718148
+    created: 1674707773619
+    name: live
+    data:
+      url: https://aa00-2a02-cb80-408b-3fba-e9ec-6084-b92e-4ec.in.ngrok.io/api/v1
+      token: Bearer 1|7XN0mZXkCMJMm5Bk5W9yxI7z0t1jcwrDWfPgawVa
+    dataPropertyOrder:
+      "&":
+        - url
+        - token
+    color: "#73ff00"
+    isPrivate: false
+    metaSortKey: 1674707773619
+    _type: environment
+  - _id: env_036171f4127742d781019ddd6d3890c0
+    parentId: env_0166e6948e55e1bf92da8ad214bbc0c232cca805
+    modified: 1677581275741
+    created: 1674707776752
+    name: local
+    data:
+      url: http://localhost/api/v1
+      token: Bearer 1|iUkErEFof143dzIqdMgkAW5HKCR5qlaPheXTCEQC
+    dataPropertyOrder:
+      "&":
+        - url
+        - token
+    color: "#ff0000"
+    isPrivate: false
+    metaSortKey: 1674707776752
+    _type: environment
