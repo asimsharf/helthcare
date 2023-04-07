@@ -196,6 +196,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\TelescopeServiceProvider::class,
         App\Providers\RepositoryServiceProvider::class,
+        L5Swagger\L5SwaggerServiceProvider::class,
+
 
     ],
 

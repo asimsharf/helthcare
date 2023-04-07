@@ -37,4 +37,5 @@ class AnotherPatiantRepository implements AnotherPatiantInterface
         $anotherPatiant->delete();
         return $anotherPatiant;
     }
+
 }

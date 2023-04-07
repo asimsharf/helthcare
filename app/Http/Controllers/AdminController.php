@@ -31,6 +31,8 @@ class AdminController extends Controller
         return $this->adminInterface->logout($request);
     }
 
+    
+
     public function index()
     {
         return $this->adminInterface->index();

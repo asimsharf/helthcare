@@ -9,6 +9,9 @@
         "@vitejs/plugin-vue": "^3.0.1",
         "axios": "^1.1.2",
         "bootstrap": "^5.2.1",
+        "grunt-jsdoc": "^2.4.1",
+        "ink-docstrap": "^1.3.2",
+        "jsdoc": "^4.0.2",
         "laravel-vite-plugin": "^0.6.0",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
@@ -17,6 +20,7 @@
         "vue": "^3.2.36"
     },
     "dependencies": {
+        "grunt": "^1.6.1",
         "vue-loader": "^17.0.1",
         "vue-router": "^4.1.6"
     }

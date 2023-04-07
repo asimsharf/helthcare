@@ -8,6 +8,13 @@ NC		= \033[0m
 
 SL := vendor/bin/sail
 
+prt:
+	@echo "$(CYAN)Printing variables...$(NC)"
+	@echo "$(RED)RED$(NC)"
+	@echo "$(GREEN)GREEN$(NC)"
+	@echo "$(YELLOW)YELLOW$(NC)"
+	@echo "$(BLUE)done$(NC)"
+
 up:
 	@echo "$(CYAN)Starting services...$(NC)"
 	$(SL) up -d 																			# get services running		
@@ -137,6 +144,11 @@ backupproject:
 	$(SL) artisan backup:run --only-files													# backup project
 	@echo "$(GREEN)Project backed up!$(NC)"
 
+
+db_backup:
+	@echo "$(CYAN)Backing up database...$(NC)"
+	$(SL) artisan backup:run --only-db														# backup database
+	@echo "$(GREEN)Database backed up!$(NC)"
 
 help:
 	@echo "$(CYAN)Sanedny API$(NC)$(NC)"

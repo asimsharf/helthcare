@@ -5,7 +5,7 @@ namespace App\Observers;
 use App\Models\User;
 
 // We need to Register this observer in AppServiceProvider on the boot method
-class UserObserver
+class UserObserver 
 {
     /**
      * Handle the User "created" event.

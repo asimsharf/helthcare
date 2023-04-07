@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use Illuminate\Http\Request;
 use App\Interfaces\ClinicInterface;
 
@@ -40,5 +39,4 @@ class ClinicController extends Controller
         return $this->clinicInterface->destroy($id);
     }
 
-    
 }
