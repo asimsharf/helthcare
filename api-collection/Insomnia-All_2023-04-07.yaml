@@ -31,7 +31,7 @@ resources:
     parentId: null
     modified: 1675926823355
     created: 1667368030355
-    name: SANEDNY-API
+    name: helthcare-API
     description: ""
     scope: design
     _type: workspace
@@ -4904,7 +4904,7 @@ resources:
     parentId: wrk_3db2426480374e4a851f71d7fc719c8b
     modified: 1672139277827
     created: 1667368030356
-    fileName: SANEDNY-API
+    fileName: helthcare-API
     contents: ""
     contentType: yaml
     _type: api_spec

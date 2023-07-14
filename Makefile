@@ -48,12 +48,12 @@ rmi:
 	
 logs:
 	@echo "$(CYAN)Showing logs...$(NC)"
-	$(SL) logs sanedny-api/app -f															# show logs
+	$(SL) logs helthcare-api/app -f															# show logs
 	@echo "$(GREEN)Logs shown!$(NC)"
 
 exec:
 	@echo "$(CYAN)Executing command: $(filter-out $@,$(MAKECMDGOALS))$(NC)"
-	$(SL) exec -it sanedny-api/app /bin/sh													# execute command
+	$(SL) exec -it helthcare-api/app /bin/sh													# execute command
 	@echo "$(GREEN)Command executed!$(NC)"
 
 clean:
@@ -87,17 +87,17 @@ update:
 
 save:
 	@echo "$(CYAN)Saving image...$(NC)"
-	docker save sanedny-api/app:latest > sanedny-api.tar									# save image
+	docker save helthcare-api/app:latest > helthcare-api.tar									# save image
 	@echo "$(GREEN)Image saved!$(NC)"
 
 load:
 	@echo "$(CYAN)Loading image...$(NC)"
-	docker load < sanedny-api.tar															# load image
+	docker load < helthcare-api.tar															# load image
 	@echo "$(GREEN)Image loaded!$(NC)"
 
 run:
 	@echo "$(CYAN)Running image...$(NC)"
-	docker run -it --rm --name sanedny-api -p 80:80 sanedny-api/app							# run image
+	docker run -it --rm --name helthcare-api -p 80:80 helthcare-api/app							# run image
 	@echo "$(GREEN)Image run!$(NC)"
 
 build:
@@ -107,12 +107,12 @@ build:
 
 push:
 	@echo "$(CYAN)Pushing image...$(NC)"
-	docker push sanedny-api/app																# push image
+	docker push helthcare-api/app																# push image
 	@echo "$(GREEN)Image pushed!$(NC)"
 
 pull:
 	@echo "$(CYAN)Pulling image...$(NC)"
-	docker pull sanedny-api/app																# pull image
+	docker pull helthcare-api/app																# pull image
 	@echo "$(GREEN)Image pulled!$(NC)"
 
 test:
@@ -153,9 +153,9 @@ db_backup:
 aws:
 	@echo "$(CYAN)Pushing image...$(NC)"
 	aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/h8v3n3e4
-	docker build -t sanedny-api .
-	docker tag sanedny-api:latest public.ecr.aws/h8v3n3e4/sanedny-api:latest
-	docker push public.ecr.aws/h8v3n3e4/sanedny-api:latest
+	docker build -t helthcare-api .
+	docker tag helthcare-api:latest public.ecr.aws/h8v3n3e4/helthcare-api:latest
+	docker push public.ecr.aws/h8v3n3e4/helthcare-api:latest
 	@echo "$(GREEN)Image pushed!$(NC)"
 
 key:

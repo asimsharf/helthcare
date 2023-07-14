@@ -7,7 +7,7 @@ services:
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
-        image: sanedny-api/app
+        image: helthcare-api/app
         extra_hosts:
             - 'host.docker.internal:host-gateway'
         ports:
